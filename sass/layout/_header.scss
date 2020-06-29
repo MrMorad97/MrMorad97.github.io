@@ -1,4 +1,5 @@
 .header {
+    
     height: 120vh;
     background-image : linear-gradient(to bottom ,rgba(black,.8),transparent),
                        url("resources/bg-img");
@@ -16,7 +17,8 @@
     }
 
     svg{
-        margin-top: 60vh;
+        position: absolute;
+        bottom: 0;
     }
 
 }
@@ -87,6 +89,7 @@
 }
 
 .heading-primary{
+    backface-visibility: hidden;
     color:white;
     text-transform: uppercase;
     text-align: center;
