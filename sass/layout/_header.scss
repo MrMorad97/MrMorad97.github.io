@@ -1,0 +1,111 @@
+.header {
+    height: 120vh;
+    background-image : linear-gradient(to bottom ,rgba(black,.8),transparent),
+                       url("resources/bg-img");
+    background-size: cover;
+    background-position:top;
+
+    position: relative;
+
+    &__centured-content{
+        position: absolute;
+        top: 44%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+
+    svg{
+        margin-top: 60vh;
+    }
+
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    
+    &__component1{
+        text-align: center;
+        font-size: 4rem;
+        margin: 1rem;
+        width: 10%;
+        color: white;
+        background-color: $color-green3;
+        animation: logo-animation 1s ease;
+    }
+
+    &__component2{
+        width: 40%;
+        color: white;
+        ul{
+            list-style: none;
+            li{
+                animation: li-animation 1s;
+                display: inline-block;
+                padding-top: 3rem;
+                font-size: 2rem;
+                text-transform: capitalize;
+                cursor: pointer;
+                position: relative;
+                font-weight: 600;
+                &:not(:last-child){
+                    margin-right: 5rem;
+                }
+            }
+            li::after{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 2px;
+                width: 0;
+                background-color: $color-green1;
+                transition: all .3s;
+                backface-visibility: hidden;
+            }
+            li:hover::after{
+                width: 50%;
+            }
+
+            li::before{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: 2px;
+                width: 0;
+                background-color: $color-green4;
+                transition: all .3s;
+            }
+            li:hover::before{
+                width: 50%;
+            }
+        }
+    }
+    
+}
+
+.heading-primary{
+    color:white;
+    text-transform: uppercase;
+    text-align: center;
+
+    &--main{
+        display: block;
+        font-weight: 400;
+        font-size: 7rem;
+        letter-spacing: 2rem;
+
+        animation: moveFromTop 1s ease ;
+    }
+    
+    &--sub{
+        display: block;
+        font-weight: 700;
+        font-size: 3rem;
+        letter-spacing: 2.5rem;
+    
+        animation: moveFrombottom 1s ease ;
+    }
+}

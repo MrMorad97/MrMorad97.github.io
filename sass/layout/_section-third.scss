@@ -1,0 +1,47 @@
+.section-third{
+    background-color: $color-green3;
+    padding-top: 1rem;
+    padding-bottom: 15rem;
+}
+
+.story{
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 5rem;
+    background-color: white;
+    @include clearfix;
+    &:hover .story__fig-img{
+        transform: translateX(-3.5rem) scale(1);
+        filter: blur(3px) brightness(80%);
+    }
+    &:hover .story__fig-name{
+        opacity: 1;
+        transform: translateY(-4.5rem);
+    }
+    &__fig{
+        float: left;
+        height: 13rem;
+        width: 13rem;
+        margin-right: 2rem;
+        margin-top: 1rem;
+        clip-path: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        position: relative;
+        &-img{
+            height: 100%;
+            transform: translateX(-3.5rem) scale(1.1);
+            transition: all .4s;
+        }
+        &-name{
+            position: absolute;
+            transition: all .4s;
+            top: 80%;
+            left: 16%;
+            color: white;
+            opacity: 0;
+        }
+
+    }
+
+}
